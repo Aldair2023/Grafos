@@ -39,10 +39,10 @@
 
 		var aristas = new vis.DataSet([
 
-		{from:1, to:3},
-		{from:1, to:5},
-		{from:5, to:3},
-		{from:4, to:2}
+		{from:1, to:3, label:"40"},
+		{from:1, to:5, label:"10"},
+		{from:5, to:3, label:"23"},
+		{from:4, to:2, label:"54"}
 		]);
 
 		var contenedor = document.getElementById("grafo1");
@@ -52,7 +52,18 @@
 			edges: aristas
 		};
 
-		var opciones = {};
+		var opciones = {
+			edges:{
+				arrow:{
+					to:{
+						enabled: true;
+					}
+				}
+			configure:{
+				enabled:true, container:undefined,   showButton:true
+			}
+			}
+		};
 
 		var grafo = new vis.Network(contenedor,datos,opciones);
 
