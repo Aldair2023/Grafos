@@ -5,6 +5,7 @@
 
 	<script type="text/javascript" 
 		src="vis/dist/vis.js"></script>
+
 	<link href="vis/dist/vis.css" rel="stylesheet" type="text/css">
 
 	<style type="text/css">
@@ -29,21 +30,31 @@
 		
 		var nodos = new vis.DataSet([
 
-		{id:1 , label:"A"}
-		{id:2 , label:"B"}
-		{id:3 , label:"C"}
-		{id:4 , label:"D"}
-		{id:5 , label:"E"}
-		])
+		{id:1, label:"A"},
+		{id:2, label:"B"},
+		{id:3, label:"C"},
+		{id:4, label:"D"},
+		{id:5, label:"E"}
+		]);
 
 		var aristas = new vis.DataSet([
 
-		{from:1 , to:3}
-		{from:1 , to:5}
-		{from:5 , to:3}	
-		{from:4 , to:2}
+		{from:1, to:3},
+		{from:1, to:5},
+		{from:5, to:3},
+		{from:4, to:2}
+		]);
 
-			])
+		var contenedor = document.getElementById("grafo1");
+
+		var datos = {
+			nodes: nodos,
+			edges: aristas
+		};
+
+		var opciones = {};
+
+		var grafo = new vis.Network(contenedor,datos,opciones);
 
 	</script>
 
