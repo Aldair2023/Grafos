@@ -26,8 +26,9 @@
 	</div>
 
 
-	<script type="text/javascript" > 
+	<script type="text/javascript"> 
 		
+		//Creacion de array para los nodos
 		var nodos = new vis.DataSet([
 
 		{id:1, label:"A"},
@@ -37,6 +38,8 @@
 		{id:5, label:"E"}
 		]);
 
+
+		//Creacion de array para los aristas
 		var aristas = new vis.DataSet([
 
 		{from:1, to:3, label:"40"},
@@ -56,12 +59,14 @@
 			edges:{
 				arrow:{
 					to:{
-						enabled: true;
+						enabled: true
+						}
 					}
-				}
+				},
 			configure:{
-				enabled:true, container:undefined,   showButton:true
-			}
+				enabled:true, 
+				container:undefined, 
+				showButton:true
 			}
 		};
 
